@@ -112,7 +112,7 @@ const Products = () => {
                             rating={rating}
                             category={category}
                             supply={supply}
-                            stat={stat}
+                            stat={stat[0]}
                         />
                     ))}
                 </Box>)

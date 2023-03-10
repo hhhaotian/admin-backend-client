@@ -145,28 +145,29 @@ const Sidebar = ({
                             {navItems.map(({ text, icon }) => {
                                 if (!icon) {
                                     return (
-                                        <Typography key={text} sx={{ m: '2.25rem 0 1 rem 3 rem' }}>
+                                        <Typography key={text} sx={{ m: '2.25rem 0 1rem 3rem' }}>
                                             {text}
                                         </Typography>
                                     );
                                 }
                                 const lcText = text.toLowerCase();
                                 return (
-                                    <ListItem key={text} disablePadding>
+                                    <ListItem
+                                        key={text} disablePadding>
                                         <ListItemButton
                                             onClick={() => {
                                                 navigate(`/${lcText}`);
                                                 setActive(lcText);
                                             }}
                                             sx={{
-                                                backgroundColor: active === lcText ? theme.palette.secondary[300] : 'transparent',
+                                                backgroundColor: active === lcText
+                                                    ? theme.palette.secondary[300]
+                                                    : 'transparent',
                                                 color:
                                                     active === lcText ?
                                                         theme.palette.primary[600] :
                                                         theme.palette.secondary[100]
-
                                             }}
-
                                         >
                                             <ListItemIcon
                                                 sx={{
